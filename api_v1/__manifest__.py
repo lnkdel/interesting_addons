@@ -9,12 +9,8 @@
         Odoo Web Api V1
     """,
 
-    'author': "HSIT",
-    'website': "http://www.hscarbonfibre.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
-    # for the full list
+    'author': "lnkdel",
+    'website': "http://www.feicai.club",
     'category': 'Tools',
     'version': '0.1',
 
@@ -26,9 +22,5 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
     ],
 }
