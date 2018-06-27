@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="ai_image_recognition_form_view">
+            <field name="name">ai.image.recognition.form</field>
+            <field name="model">ai.image.recognition</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="sample" widget='image'/>
+                            <field name="name"/>
+                            <field name="score" widget="progressbar"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ai_image_recognition_tree_view">
+            <field name="name">ai.image.recognition.tree</field>
+            <field name="model">ai.image.recognition</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ai_image_recognition_action">
+            <field name="name">Image Recognition</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ai.image.recognition</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ai_root" name="Artificial Intelligence"/>
+        <menuitem id="menu_ai_image" name="Images" parent="menu_ai_root"/>
+        <menuitem id="menu_ai_image_recognition" name="Image Recognition" parent="menu_ai_image" action="ai_image_recognition_action"/>
+    </data>
+</odoo>
